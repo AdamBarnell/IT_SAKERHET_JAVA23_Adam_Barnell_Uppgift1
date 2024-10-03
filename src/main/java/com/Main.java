@@ -2,7 +2,6 @@ package com;
 
 import java.sql.*;
 import java.util.Scanner;
-
 public class Main {
     public static Connection connect() {
         Connection con = null;
@@ -10,7 +9,7 @@ public class Main {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/databassecurity", "adam", "adam");
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return con;
     }
